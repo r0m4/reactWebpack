@@ -1,9 +1,29 @@
-import React, { Component } from 'react';
+'use strict';
+var React = require('react');
 
-export default class App extends Component {
+
+var  App = React.createClass({ 
+  
+  getInitialState(){
+    return {containers: (new Array(10).fill('available'))};
+  },
+
+
+
   render() {
+
+
+    var containers = this.state.containers;
+    var elements = containers.map(function (st, num) {
+      return <div key={num}>{num}</div>
+    });
+
     return (
-      <h1>Hello, world.</h1>
+      <div>
+      {elements}
+      </div>
+      
     );
   }
-}
+
+});
