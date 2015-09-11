@@ -1,0 +1,21 @@
+.cont {
+    width: 120px;
+    height: 60px;
+    border: 1px solid black;
+    margin: 10px;
+    float: left;
+    text-align: center;
+
+}
+
+.cont.selected {
+    background-color: blue;
+}
+
+::selection {
+background: transparent; 
+}
+
+.cont.removed {
+    opacity: 0.1;
+}
